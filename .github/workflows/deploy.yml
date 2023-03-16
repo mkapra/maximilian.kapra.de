@@ -30,7 +30,7 @@ jobs:
       - run: mkdir ./dist
       - run: npx tailwindcss -i ./src/css/style.css -o ./dist/output.css
       - run: cp ./src/index.html ./dist/
-      - run: cp ./src/img ./dist/
+      - run: cp -r ./src/img ./dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
